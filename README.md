@@ -1,14 +1,17 @@
 
 # Setup
-## 1 Local server: Node
+## 1 Local server: (Node)[https://nodejs.org/en/download]
 1. install node.js (check version `node -v`)
 2. check npm version `npm -v`
 
-## 2 Track changes: git
+## 2 Track changes: (git)[https://git-scm.com/install/]
 1. install git (check version `git --version`)
-2. `$git init $git add . $git commit -m "initial commit" $git remote add origin <your-repo-url> $git push -u origin main`
+2. `$git init $git add . $git commit -m "initial commit" $git branch -M main $git remote add origin <your-repo-url> $git push -u origin main`
 3. add `.gitignore` file to not track changes is certain files/folders
 
+(official guide)[https://git-scm.com/cheat-sheet]
+(git guide)[https://rogerdudler.github.io/git-guide/]
+(git will make sense)[https://youtu.be/Ala6PHlYjmw?si=Tv8UItUkZn2YfgYo]
 
 ## 3 Install packages: [npm](https://www.w3schools.com/nodejs/nodejs_package_json.asp)
 
@@ -48,10 +51,15 @@
 ## 8 Code quality tools:ESLint
 
 ## 9 Security: env
-1. environment variables in `.env` file
-2. 
 
-[12factor](https://12factor.net/)
+`node --env-file=.env index.js`
+
+1. environment variables in `.env` file
+2. import loader `import { loadEnvFile } from 'process'; `
+3. load constants `loadEnvFile('.env');`
+4. access variables `process.env.VARIABLE_NAME`
+
+[12factor](https://12factor.net/) security rules
 
 ## Testing framework: Vitest
 
